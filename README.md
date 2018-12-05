@@ -1,5 +1,8 @@
 ## DSO Market Clearing Formulation
 
+This tool is companion software to the conference paper 'A DSO-Level Contract Market for Conditional Demand Response' 
+Using the parameters from the case study in the paper, determines the optimal combination of DR services, paying aggregators accordingly.
+
 # INPUT
 Sets - Contains the sets used in the DSO Market clearing tool
 
