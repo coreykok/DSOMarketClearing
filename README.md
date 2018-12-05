@@ -1,7 +1,7 @@
 ### DSO Market Clearing Formulation
 
-This tool is companion software to the paper 'A DSO-Level Contract Market for Conditional Demand Response' submitted to the PowerTech conference occurring in Milan 2019.
-Using the parameters from the case study in the paper, determines the optimal combination of DR services, paying aggregators according to the criteria detailed in the paper.
+This tool is companion software to the paper 'A DSO-Level Contract Market for Conditional Demand Response' submitted to the IEEE PES PowerTech Conference in Milan, 2019.
+Using the parameters from the case study in the paper, determines the optimal combination of DR services, paying aggregators accordingly.
 
 ### INPUT
 Sets - Contains the sets used in the DSO Market clearing tool
