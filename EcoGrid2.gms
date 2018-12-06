@@ -232,9 +232,10 @@ h_W_Con(p,i) = h_T_Con(p,i)
              - sum(t, (CResCon(p,i,t) + QQ(p) * CDispCon(p,i,t)) * Pup.l(p,i,t));
 h_W_DR(p,c)  = h_T_DR(p,c)
              - sum(d, (CResDR(p,c,d) + QQ(p) * CDispDR(p,c,d)) * Rup.l(p,c,d));
-h_W_DSO(p)   = sum(t,(CResReb(p,t) + QQ(p) * CDispReb(p,t)) * Sup.l(p,t))
-             + (CResDSO(p) + QQ(p) * CDispDSO(p)) * z.l(p)
-             - sum(i,h_T_Con(p,i)) - sum(c,h_T_DR(p,c));
+h_W_DSO(p)   = (CResDSO(p) + QQ(p) * CDispDSO(p)) * z.l(p)
+             - sum(t, (CResReb(p,t) + QQ(p) * CDispReb(p,t)) * Sup.l(p,t) )
+             - sum(i,h_T_Con(p,i))
+             - sum(c,h_T_DR(p,c));
 
 
 
