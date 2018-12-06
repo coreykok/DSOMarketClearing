@@ -43,28 +43,28 @@ $include Params\B_DR.inc
 Q_DR(p,c,d,t) Asymmetric block definition (KW per t) for each block /
 $include Params\Q_DR.inc
 /
-CResCon(p,i,t) Reserve cost for conventional unit (€ per KW per t) /
+CResCon(p,i,t) Reserve cost for conventional unit (â‚¬ per KW per t) /
 $include Params\CResCon.inc
 /
-CDispCon(p,i,t)  Dispatch cost for conventional unit (€ per KW per t)/
+CDispCon(p,i,t)  Dispatch cost for conventional unit (â‚¬ per KW per t)/
 $include Params\CDispCon.inc
 /
-CResDR(p,c,d) Reserve cost for asymmetric block aggregator (€ per Block)/
+CResDR(p,c,d) Reserve cost for asymmetric block aggregator (â‚¬ per Block)/
 $include Params\CResDR.inc
 /
-CDispDR(p,c,d) Dispatch cost for asymmetric block aggregator (€ per Block)/
+CDispDR(p,c,d) Dispatch cost for asymmetric block aggregator (â‚¬ per Block)/
 $include Params\CDispDR.inc
 /
-CResReb(p,t) Reserve rebound cost for DR service (€ per KW per t)/
+CResReb(p,t) Reserve rebound cost for DR service (â‚¬ per KW per t)/
 $include Params\CResReb.inc
 /
-CDispReb(p,t) Dispatch rebound cost for DR service (€ per KW per t)/
+CDispReb(p,t) Dispatch rebound cost for DR service (â‚¬ per KW per t)/
 $include Params\CDispReb.inc
 /
-CResDSO(p) Bid-value to reserve DR service (€) to satisfy requirement p/
+CResDSO(p) Bid-value to reserve DR service (â‚¬) to satisfy requirement p/
 $include Params\CResDSO.inc
 /
-CDispDSO(p) Bid-value to dispatch DR service (€) to satisfy requirement p/
+CDispDSO(p) Bid-value to dispatch DR service (â‚¬) to satisfy requirement p/
 $include Params\CDispDSO.inc
 /
 ;
@@ -179,6 +179,13 @@ FILE OPT cplex OPTION FILE /cplex.opt/
 put opt;
 put 'threads 0'/;
 putclose;
+
+Option Limcol = 10000;
+Option Limrow = 10000;
+Option optcr = 0
+Option optca = 0
+
+OPTION RESLIM = 50000;
 
 
 Rup.lo(p,c,d) = 0;
